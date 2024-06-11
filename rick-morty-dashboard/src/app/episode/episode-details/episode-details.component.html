@@ -1,15 +1,32 @@
-<h2>{{ episode.name }}</h2>
-<p><strong>Air Date:</strong> {{ episode.air_date }}</p>
-<p><strong>Episode:</strong> {{ episode.episode }}</p>
+<div class="modal-content">
+  <div class="modal-header">
+    <h2>{{ episode.name }}</h2>
+  </div>
+  <div class="modal-body">
+    <p><strong>Air Date:</strong> {{ episode.air_date }}</p>
+    <p><strong>Episode:</strong> {{ episode.episode }}</p>
 
-<div class="characters">
-  <h3>Characters:</h3>
-  <div class="character-list">
-    <div *ngFor="let character of characters" class="character">
-      <img [src]="character.image" [alt]="character.name" class="character-image">
-      <p>{{ character.name }}</p>
+    <div class="characters">
+      <h3>Characters:</h3>
+      <div class="character-list">
+        <div *ngIf="isLoading" class="spinner-container">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div *ngIf="!isLoading" class="character-grid">
+          <div *ngFor="let character of visibleCharacters" class="character">
+            <img [src]="character.image" [alt]="character.name" class="character-image">
+          </div>
+          <div *ngIf="hasMoreCharacters" class="character more-characters" (click)="showAllCharacters()">
+            <div class="more-character-indicator">+</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="modal-footer">
+    <button mat-button (click)="showAllCharacters()">Show All Characters</button>
+    <button mat-button (click)="onClose()">Back to List</button>
+  </div>
 </div>
-
-<button mat-button (click)="onClose()">Back to List</button>

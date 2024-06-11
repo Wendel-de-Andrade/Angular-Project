@@ -7,11 +7,11 @@
   </button>
   <div class="collapse navbar-collapse" id="sidebarDropdown">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/dashboard/characters']">Personagens</a>
+      <li class="nav-item" [class.active]="isActive('/dashboard/characters')">
+        <a class="nav-link" [routerLink]="['/dashboard/characters']" routerLinkActive="active">Personagens</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/dashboard/episodes']">Episódios</a>
+      <li class="nav-item" [class.active]="isActive('/dashboard/episodes')">
+        <a class="nav-link" [routerLink]="['/dashboard/episodes']" routerLinkActive="active">Episódios</a>
       </li>
     </ul>
   </div>
@@ -21,11 +21,11 @@
 <nav class="d-none d-md-block bg-light sidebar">
   <div class="sidebar-sticky">
     <ul class="nav flex-column">
-      <li class="nav-item">
-        <a class="nav-link active" [routerLink]="['/dashboard/characters']">Personagens</a>
+      <li class="nav-item" [class.active]="isActive('/dashboard/characters')">
+        <a class="nav-link" [routerLink]="['/dashboard/characters']" routerLinkActive="active">Personagens</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/dashboard/episodes']">Episódios</a>
+      <li class="nav-item" [class.active]="isActive('/dashboard/episodes')">
+        <a class="nav-link" [routerLink]="['/dashboard/episodes']" routerLinkActive="active">Episódios</a>
       </li>
     </ul>
   </div>

@@ -1,5 +1,6 @@
-<nav class="navbar navbar-light bg-light">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" (input)="onSearch($event)">
-  </form>
+<nav class="navbar">
+  <div class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search" [(ngModel)]="searchQuery"
+      (ngModelChange)="onSearch()" (keydown)="preventSubmit($event)" name="search" />
+  </div>
 </nav>

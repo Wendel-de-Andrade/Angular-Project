@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,7 +13,9 @@ export class SidebarComponent {
   isCollapsed: boolean = true;
   isTransitioning: boolean = false;
   lastToggleTime: number = 0;
-  debounceTime: number = 400; // 300 ms debounce time
+  debounceTime: number = 400; // 400 ms debounce time
+
+  constructor(private router: Router) {}
 
   toggleSidebar(): void {
     const currentTime = Date.now();
@@ -33,5 +35,14 @@ export class SidebarComponent {
         this.isTransitioning = false; // Permitir cliques após o fechamento
       }, 400);
     }
+  }
+
+  isActive(url: string): boolean {
+    return this.router.isActive(url, {
+      paths: 'exact',
+      queryParams: 'exact',
+      fragment: 'ignored',
+      matrixParams: 'ignored'
+    });
   }
 }

@@ -1,7 +1,9 @@
-<div class="card">
-  <div class="card-body">
-    <h5 class="card-title">Profile</h5>
-    <p class="card-text"><strong>Name:</strong> {{ user.name }}</p>
-    <p class="card-text"><strong>Email:</strong> {{ user.email }}</p>
+<div class="profile-container text-center mt-5">
+  <div class="profile-image">
+    <i class="fas fa-user-circle fa-7x"></i>
+  </div>
+  <div class="profile-details mt-3">
+    <h3>{{ authService.getUser().name }}</h3>
+    <p>{{ authService.getUser().email }}</p>
   </div>
 </div>

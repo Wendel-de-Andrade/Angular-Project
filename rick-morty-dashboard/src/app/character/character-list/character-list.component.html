@@ -1,6 +1,14 @@
 <div class="d-flex justify-content-center">
   <app-search-bar (search)="onSearch($event)"></app-search-bar>
 </div>
+
+<!-- Spinner de carregamento -->
+<div *ngIf="isLoading && !isLoadingMore" class="d-flex justify-content-center my-3">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-4 col-sm-6" *ngFor="let character of characters">
     <app-card
@@ -13,3 +21,15 @@
     </app-card>
   </div>
 </div>
+
+<!-- Spinner de carregamento adicional -->
+<div *ngIf="isLoadingMore" class="d-flex justify-content-center my-3">
+  <div class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<!-- Botão flutuante para voltar ao topo -->
+<button *ngIf="showScrollToTop" (click)="scrollToTop()" class="btn btn-primary scroll-to-top">
+  ↑
+</button>

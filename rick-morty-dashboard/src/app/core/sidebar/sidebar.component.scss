@@ -11,6 +11,24 @@
   overflow-x: hidden;
   overflow-y: auto;
   border-right: 1px solid #eee;
+
+  .nav-item {
+    .nav-link {
+      color: #333;
+      padding: 10px 15px;
+      transition: background-color 0.3s, color 0.3s;
+
+      &:hover {
+        background-color: #f8f9fa;
+        color: #007bff;
+      }
+
+      &.active {
+        background-color: #007bff;
+        color: white;
+      }
+    }
+  }
 }
 
 .sidebar-collapse {
@@ -29,5 +47,5 @@
 }
 
 .navbar-expand-lg .navbar-toggler {
-  border-color: rgba(0,0,0,.1);
+  border-color: rgba(0, 0, 0, .1);
 }

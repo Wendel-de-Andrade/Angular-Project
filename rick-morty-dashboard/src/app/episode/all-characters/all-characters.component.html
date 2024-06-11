@@ -1,0 +1,16 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h2>All Characters</h2>
+  </div>
+  <div class="modal-body">
+    <div class="character-list">
+      <div *ngFor="let character of data.characters" class="character">
+        <img [src]="character.image" [alt]="character.name" class="character-image">
+        <p class="character-name">{{ character.name }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button mat-button (click)="onClose()">Back</button>
+  </div>
+</div>
