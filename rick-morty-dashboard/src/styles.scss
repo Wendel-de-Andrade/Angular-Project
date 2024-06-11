@@ -1,3 +1,46 @@
+@import 'app/variables';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Estilização da borda do input focado */
+.form-control:focus {
+  border-color: $blue;
+  box-shadow: 0 0 0 0.2rem $cyan;
+  /* Altere esta cor conforme necessário */
+}
+
+.btn-padrao {
+  background-color: $darker-green-dark;
+  border-color: $darker-green-dark;
+  font-weight: 500;
+  color: #fcfcfc;
+
+  &:hover {
+    background-color: $green-dark;
+    border-color: $green-dark;
+    color: #fcfcfc;
+  }
+}
+
+
+.btn-padrao-2 {
+  background-color: $darker-cyan;
+  border-color: $darker-cyan;
+  font-weight: 500;
+  color: #fcfcfc;
+
+  &:hover {
+    background-color: $cyan;
+    border-color: $cyan;
+    color: #fcfcfc;
+  }
+}
+

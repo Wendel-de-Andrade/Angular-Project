@@ -3,11 +3,12 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { RickMortyService } from '../../services/rick-morty.service';
 import { CommonModule } from '@angular/common';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-character-details',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MatButtonModule],
   templateUrl: './character-details.component.html',
   styleUrls: ['./character-details.component.scss']
 })

@@ -5,7 +5,7 @@
 <!-- Spinner de carregamento -->
 <div *ngIf="isLoading && !isLoadingMore" class="d-flex justify-content-center my-3">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Carregando...</span>
   </div>
 </div>
 
@@ -14,9 +14,9 @@
     <app-card
       [imageUrl]="null"
       [title]="episode.name"
-      [text]="episode.air_date"
+      [text]="episode.episode"
       [link]="['/episode', episode.id].join('/')"
-      linkText="Details"
+      linkText="Detalhes"
       (detailClick)="openEpisodeModal(episode)">
     </app-card>
   </div>
@@ -25,7 +25,7 @@
 <!-- Spinner de carregamento adicional -->
 <div *ngIf="isLoadingMore" class="d-flex justify-content-center my-3">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Carregando...</span>
   </div>
 </div>
 

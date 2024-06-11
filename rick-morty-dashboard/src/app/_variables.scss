@@ -3,6 +3,8 @@ $sidebar-width: 200px;
 
 $green: rgb(204,255,140);
 $green-dark: rgb(129,222,118);
+$darker-green-dark: darken($green-dark, 30%);
 $blue-dark: rgb(58,85,180);
 $blue: rgb(108,173,223);
 $cyan: rgb(140,217,255);
+$darker-cyan: darken($cyan, 30%);

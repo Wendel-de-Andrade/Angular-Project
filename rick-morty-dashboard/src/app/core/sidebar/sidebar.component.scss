@@ -16,15 +16,15 @@
     .nav-link {
       color: #333;
       padding: 10px 15px;
-      transition: background-color 0.3s, color 0.3s;
+      transition: all ease 0.3s, color 0.3s;
 
       &:hover {
         background-color: #f8f9fa;
-        color: #007bff;
+        color: $green-dark
       }
 
       &.active {
-        background-color: #007bff;
+        background-color: $darker-green-dark;
         color: white;
       }
     }

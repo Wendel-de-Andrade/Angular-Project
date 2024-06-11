@@ -1,0 +1,14 @@
+
+button.mat-button {
+  background-color: #28a745; /* Cor verde para o fundo do botão */
+  color: #fff; /* Cor do texto */
+}
+
+button.mat-button:hover {
+  background-color: #218838; /* Cor verde mais escura para o hover */
+}
+
+button.mat-button:focus,
+button.mat-button:active {
+  background-color: #1e7e34; /* Cor verde ainda mais escura para o focus e active */
+}

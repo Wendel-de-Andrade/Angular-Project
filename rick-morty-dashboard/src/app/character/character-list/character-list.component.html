@@ -5,7 +5,7 @@
 <!-- Spinner de carregamento -->
 <div *ngIf="isLoading && !isLoadingMore" class="d-flex justify-content-center my-3">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Carregando...</span>
   </div>
 </div>
 
@@ -16,7 +16,7 @@
       [title]="character.name"
       [text]="character.species"
       [link]="['/character', character.id].join('/')"
-      linkText="Details"
+      linkText="Detalhes"
       (detailClick)="openCharacterModal(character)">
     </app-card>
   </div>
@@ -25,7 +25,7 @@
 <!-- Spinner de carregamento adicional -->
 <div *ngIf="isLoadingMore" class="d-flex justify-content-center my-3">
   <div class="spinner-border" role="status">
-    <span class="visually-hidden">Loading...</span>
+    <span class="visually-hidden">Carregando...</span>
   </div>
 </div>
 

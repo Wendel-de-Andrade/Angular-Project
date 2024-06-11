@@ -3,15 +3,15 @@
     <h2>{{ episode.name }}</h2>
   </div>
   <div class="modal-body">
-    <p><strong>Air Date:</strong> {{ episode.air_date }}</p>
-    <p><strong>Episode:</strong> {{ episode.episode }}</p>
+    <p><strong>Data de Estreia:</strong> {{ episode.air_date }}</p>
+    <p><strong>Episódio:</strong> {{ episode.episode }}</p>
 
     <div class="characters">
-      <h3>Characters:</h3>
+      <h3>Personagens:</h3>
       <div class="character-list">
         <div *ngIf="isLoading" class="spinner-container">
           <div class="spinner-border" role="status">
-            <span class="visually-hidden">Loading...</span>
+            <span class="visually-hidden">Carregando...</span>
           </div>
         </div>
         <div *ngIf="!isLoading" class="character-grid">
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="modal-footer">
-    <button mat-button (click)="showAllCharacters()">Show All Characters</button>
-    <button mat-button (click)="onClose()">Back to List</button>
+    <button mat-button (click)="showAllCharacters()">Mostrar Todos</button>
+    <button mat-button (click)="onClose()">Voltar</button>
   </div>
 </div>

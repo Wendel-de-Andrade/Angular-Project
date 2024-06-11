@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Rick & Morty API</a>
+  <a class="navbar-brand" [routerLink]="['/dashboard/profile']">Rick & Morty API</a>
   <div class="navbar-expand ms-auto" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item dropdown" *ngIf="authService.isAuthenticated()">
@@ -8,8 +8,8 @@
           {{ authService.getUser().name }}
         </a>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
-          <li><a class="dropdown-item" [routerLink]="['/dashboard/profile']">Perfil</a></li>
-          <li><a class="dropdown-item" (click)="onLogout()">Sair</a></li>
+          <li><a class="dropdown-item profile" [routerLink]="['/dashboard/profile']">Perfil</a></li>
+          <li><a class="dropdown-item logout" (click)="onLogout()">Sair</a></li>
         </ul>
       </li>
       <li class="nav-item" *ngIf="!authService.isAuthenticated()">
