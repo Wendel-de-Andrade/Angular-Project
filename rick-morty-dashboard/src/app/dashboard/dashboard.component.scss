@@ -1,0 +1,18 @@
+@import '../variables';
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  overflow-x: hidden;
+}
+
+.main-content {
+  margin-top: $navbar-height;
+  margin-left: $sidebar-width;
+}
+
+@media (max-width: 767.98px) {
+  .main-content {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="card mb-4 shadow-sm">
+  <ng-container *ngIf="imageUrl; else noImage">
+    <img [src]="imageUrl" class="card-img-top" alt="{{ title }}">
+  </ng-container>
+  <ng-template #noImage></ng-template>
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ text }}</p>
+    <button class="btn btn-primary" (click)="onDetailClick()">{{ linkText }}</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center">
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+</div>
+<div class="row">
+  <div class="col-md-4 col-sm-6" *ngFor="let character of characters">
+    <app-card
+      [imageUrl]="character.image"
+      [title]="character.name"
+      [text]="character.species"
+      [link]="['/character', character.id].join('/')"
+      linkText="Details"
+      (detailClick)="openCharacterModal(character)">
+    </app-card>
+  </div>
+</div>

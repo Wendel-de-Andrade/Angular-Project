@@ -1,0 +1,15 @@
+<h2>{{ episode.name }}</h2>
+<p><strong>Air Date:</strong> {{ episode.air_date }}</p>
+<p><strong>Episode:</strong> {{ episode.episode }}</p>
+
+<div class="characters">
+  <h3>Characters:</h3>
+  <div class="character-list">
+    <div *ngFor="let character of characters" class="character">
+      <img [src]="character.image" [alt]="character.name" class="character-image">
+      <p>{{ character.name }}</p>
+    </div>
+  </div>
+</div>
+
+<button mat-button (click)="onClose()">Back to List</button>

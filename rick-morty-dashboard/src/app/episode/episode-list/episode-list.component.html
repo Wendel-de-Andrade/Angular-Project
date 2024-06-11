@@ -1,0 +1,15 @@
+<div class="d-flex justify-content-center">
+  <app-search-bar (search)="onSearch($event)"></app-search-bar>
+</div>
+<div class="row">
+  <div class="col-md-4 col-sm-6" *ngFor="let episode of episodes">
+    <app-card
+      [imageUrl]="null"
+      [title]="episode.name"
+      [text]="episode.air_date"
+      [link]="['/episode', episode.id].join('/')"
+      linkText="Details"
+      (detailClick)="openEpisodeModal(episode)">
+    </app-card>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  --bs-navbar-brand-margin-end: 0;
+}
+
+.dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767.98px) {
+  .navbar-brand {
+    padding-left: 65px;
+  }
+}

@@ -1,0 +1,32 @@
+<!-- Navbar for small devices -->
+<nav class="d-md-none navbar navbar-expand-lg navbar-light bg-light sidebar-collapse" [class.collapsed]="!isCollapsed">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarDropdown"
+    aria-controls="sidebarDropdown" aria-expanded="false" aria-label="Toggle navigation"
+    [disabled]="isTransitioning" (click)="toggleSidebar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="sidebarDropdown">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/dashboard/characters']">Personagens</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/dashboard/episodes']">Episódios</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Sidebar for medium and larger devices -->
+<nav class="d-none d-md-block bg-light sidebar">
+  <div class="sidebar-sticky">
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link active" [routerLink]="['/dashboard/characters']">Personagens</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/dashboard/episodes']">Episódios</a>
+      </li>
+    </ul>
+  </div>
+</nav>
